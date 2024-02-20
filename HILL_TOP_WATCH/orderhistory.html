@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <title>HILLTOP WATCH&reg;|BEUATY AND QUALITY </title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/animation.css">
+
+</head>
+<body >
+	
+	
+	<div id="header" class="row">
+			
+			
+			
+			
+			<div id="header-right" class="column right">
+			
+				<span  id="user-onload"></span>
+				<span id="shopping-cart" class="tooltip">
+					<a href="cart.html" id="giohang" class="hra" ></a>
+						
+				</span>
+				
+				<!-- <span id="taikhoan" class="tooltip">
+					<a href="#" onclick="openLogOut();" class="hra"><i class="fas fa-caret-down"></i></a>
+					<span class="tooltiptext tooltipcart" id="tooltiptk">Tài khoản</span>	
+				</span> -->
+
+			</div>
+	</div>
+
+
+	<div id="cart">
+		<div id="title">
+			<div class="container">
+				<h1>Giỏ hàng</h1>
+			</div>
+		</div>
+		<div class="container" >
+			<div id="contain" style="text-align: center;">
+				<input type="text" id="userhistory" name="userhistory" placeholder="Nhập số điện thoại cần tìm" onfocus="this.value=''" size="30"><br><button onclick="showbill();" >Tìm Kiếm</button>
+				<button><a href="index.html" style="text-decoration: none;color: white">Về Trang Chủ</a></button>
+				<div id="bill" style="margin-top: 20px;"><h2>Không Có Kết Quả</h2>
+				</div>
+				
+			
+				
+				
+			</div>
+		</div>
+	</div>
+<!-- footer -->
+<footer>
+      <div class="container1">
+      
+        <div class="txt2">
+          <h3>Liên hệ</h3>
+          <p>
+              <i class="fas fa-map-marker-alt"></i>
+                  99 An Dương Vương, Phường 16, Quận 8, TP.HCM
+            </p>
+            <p>
+              <i class="fas fa-phone"></i>
+              Phone: 1800 123456789
+            </p>
+            <p>
+               <i class="fas fa-envelope"></i>
+               Email:
+               <a href="#">doan@gmail.com</a>
+            </p>
+            <p>
+              <i class="fab fa-skype"></i>
+              Skype: doan_online
+            </p>
+        </div>
+        <div class="txt3">
+          <h3>Hỗ trợ</h3>
+          <p>
+            <a href="#">1. Chính sách mua hàng</a>
+          </p>
+          <p>
+            <a href="#">2. Chính sách thanh toán</a>
+          </p>
+          <p>
+              <a href="#">3. Chính sách vận chuyển </a>
+          </p>
+          <p>
+            <a href="#">4. Chính sách bảo mật</a>
+          </p>
+        </div>  
+        <div class="txt3_plus">
+                <h3>Sản phẩm</h3>
+          <p>
+            <a href="#">Đồng hộ cặp đôi</a>
+          </p>
+          <p>
+              <a href="#">Đồng hồ nam</a>
+          </p>
+          <p>
+            <a href="#">Đồng hồ nam</a>
+          </p>
+        </div>
+            <div class="txt4">
+                <h3>Kết nối mạng xã hội</h3>
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-google-plus-g"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+                 <p>© Company Inc.</p>
+            </div>
+      </div>
+    </footer>
+
+	<div id="container">
+			<div id="daux" onclick="Xclose();">+</div>
+			<button class="tablink" id="dangnhap" onclick="formColor('form-DN',this);">Đăng nhập</button>
+			<button class="tablink" id="dangky" onclick="formColor('form-DK',this);">Đăng ký</button>
+			<!-- <form id="logIn" class="in-put" method="post"> -->
+				<div id="form-DN" class="formain">
+					<form id="logInform">
+						<input type="text" name="username" placeholder="Tên đăng nhập" id="username">
+						<div id="usernameerror" class="error">Bạn chưa nhập tên đăng nhập</div>
+						<br>
+						<input type="password" name="password" placeholder="Mật khẩu" id="password">
+						<div id="passwordloginerror" class="error">Bạn chưa nhập mật khẩu</div>
+
+						<input type="button" name="dangnhap" value="Đăng nhập" onclick="logIn();">
+						<div><a href="#">Quên mật khẩu?</a></div>
+					</form>
+				</div>
+			<!-- </form> -->
+			<div id="form-DK" class="formain" >
+				<form id="signUpform" >
+					<div id="the">
+						<input type="text" name="hoten" placeholder="Họ và tên" id="hoten" required pattern="\S+" >
+						<div id="errorhoten" class="error">Bạn chưa nhập họ tên</div>
+					</div>
+					<div id="the">
+						<input type="text" name="ten-dn" placeholder="Tên đăng nhập" id="ten-dn"  >
+						<div id="errortendn" class="error">Vui lòng nhập tên đăng nhập</div>
+					</div>
+					<div id="the">
+						<input type="password" name="matkhau" placeholder="Mật khẩu" id="matkhau" >
+						<div id="errormk" class="error">Bạn chưa nhập mật khẩu</div>
+					</div>
+					<div id="the">
+						<input  type="password" name="rp-matkhau" placeholder="Nhập lại mật khẩu" id="rp-matkhau" >
+						<div id="error-rpmk" class="error">Mật khẩu không trùng khớp</div>
+
+					</div>
+					<div id="gioitinh">Giới tính:
+						<input type="radio" name="sex" checked="checked"> Nam
+						<input type="radio" name="sex"> Nữ
+					</div>
+					<div id="ngaysinh">Ngày sinh:
+						<input type="date" name="ngaysinh" >
+					</div>
+					<div id="the">
+						<input type="text" name="phone-number" placeholder="Số điện thoại" id="phone_number" >
+						<div id="errorphone" class="error">Vui lòng nhập số điện thoại</div>
+					</div>	
+					
+					<div id="the">
+						<input type="text" name="address" placeholder="Địa chỉ" id="address" >
+						<div id="erroradress" class="error">Vui lòng nhập địa chỉ</div>
+					</div>
+					
+				
+					<div id="nut">
+						<input type="button" value="Reset" onclick="resetForm();">
+						<input type="button" onclick="signUp();" value="Đăng Ký">
+
+					</div>
+				</form>
+			</div>
+			
+	</div>
+	<div id="bgden"></div>
+	<div id="customalert"></div>
+	<script type="text/javascript" src="js/cart.js" language="javascript"></script>
+</body>
+</html>

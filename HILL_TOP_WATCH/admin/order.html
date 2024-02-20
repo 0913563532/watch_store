@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ĐƠN HÀNG </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/all.css">
+
+</head>
+<body>
+        <div class="container">
+            <div class="navbar" style="position: relative;">
+                <div class="logo">
+                    <a href="#">HILL TOP WATCH</a>
+                </div>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="dashboard.html" class="tab-menu">THỐNG KÊ</a></li>
+                        <li><a href="product.html" class="tab-menu">SẢN PHẨM</a></li>
+                        <li><a href="customer.html" class="tab-menu">KHÁCH HÀNG</a></li>
+                        <li><a href="order.html?" id="main-page">ĐƠN HÀNG</a></li>
+                    </ul> 
+                    <a href="#" id="admin" onclick="closeAccount();"><span ><i style="color:White;" onclick="openLogOut();" class="fas fa-user-cog"> </i>  Boss <i class="fas fa-angle-down"></i></span> </a>
+                    <a href="admin.html" ><div id="log-out">Về Trang Quản lý</div></a>    
+                </nav>            
+            </div>       
+        </div>
+        <div id="sanpham" style="margin-left: 5%; height: 880px">
+            <div class="chitiet">
+                <div id="formchitiet">
+                    <div id="chitietthongtinbill">
+                        <div style="margin-top: 5px; width: 100%; height: 50px; text-align: center; font-size: 25px; line-height: 50px; color: white; position: relative"><b>CHI TIẾT ĐƠN HÀNG</b>
+                            <div id="detailclose" onclick="closeForm();">+</div>
+                        </div>
+                        <hr style="background-color: white; height: 3px">
+                        <div class="thongtinnhanhang">
+                            <div class="info">Tên sản phẩm:</div>
+                            <div class="output" id="tensanpham"></div>
+                            <div style="clear: both;"></div>
+                            <div class="info">Họ tên người nhận: </div>
+                            <div class="output" id="hotennguoinhan"></div>
+                            <div style="clear: both"></div>
+                            <div class="info">Địa chỉ nhận: </div>
+                            <div class="output" id="diachinhan"></div>
+                            <div style="clear: both"></div>
+                            <div class="info">Số điện thoại: </div>
+                            <div class="output" id="sodienthoainhan"></div>
+                            <div style="clear: both"></div>
+                               
+                        </div>
+                        <div class="thongtinhoadon">
+                            
+                            <div class="info">Ngày mua hàng: </div>
+                            <div class="output" id="ngaydat"></div>
+                            <div style="clear: both"></div>   
+                        </div>
+                        <div class="info" style="float: left; width: 30%; height: 4.5%;margin-left: 2%;"><b>Tổng tiền: </b></div>
+                        <div style="float: right; width: 60%; text-align: center; height: 4.5%" id="totalprice"></div>
+                        <div style="clear: both"></div>
+                        <div class="tinhtrang" style="margin-left:1%;float: left; width: 39%; height: 4.5%; margin-top: 3px"><b>Tình trạng hóa đơn: </b></div>
+                        <div style="float: right; width: 50%; text-align: right">
+                            <select style="width: 70%; height: 50%; margin-bottom: 10px" id="tinhtrang">
+                                <option style="color: white">Chưa xử lý</option>
+                                <option style="color: green">Đã xử lý</option>  
+                            </select>
+                        </div>
+                        <button onclick="changeTinhtrang();" style="margin-left: 35%; width: 30%; margin-top: 10%; height: 30px; border-radius: 10px; margin-bottom: 5px">Xác nhận</button>
+                    </div>
+                </div>
+            </div>
+            <div id="dsdh1" style="width: 37%; height: 50px; font-size: 30px; text-align: center;color: white;margin-bottom: 2%;"><b>DANH SÁCH ĐƠN HÀNG</b></div>
+            <div id="thongtinsp">
+                <div class="thongtin" style="width: 182px">ID Đơn hàng</div>
+                <div class="thongtin" style="width: 182px">Tên khách hàng</div>
+                <div class="thongtin" style="width: 243px">Ngày đặt hàng</div>
+                <div class="thongtin" style="width: 243px">Tổng tiền</div>
+                <div class="thongtin" style="width: 182px">Tình trạng</div>
+                <div class="thongtin" style="width: 182px">Chi tiết</div>
+                <div style="clear: both"></div>
+            </div>
+            <div id="thongtinsp">
+                <div id="idbill" style="width: 182px"></div>
+                <div id="idkhachhang" style="width: 182px"></div>
+                <div id="ngaydathang" style="width: 243px"></div>
+                <div id="tongtien" style="width: 243px"></div>
+                <div id="tinhtrangbill" style="width: 182px"></div>
+                <div id="chitietbill" style="width: 182px"></div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+         <div id="bgden"></div>
+        <div id="phantrangbill"></div>
+    <!-- footer -->
+<footer>
+      <div class="container1">
+      
+        <div class="txt2">
+          <h3>Liên hệ</h3>
+          <p>
+              <i class="fas fa-map-marker-alt"></i>
+                  99 An Dương Vương, Phường 16, Quận 8, TP.HCM
+            </p>
+            <p>
+              <i class="fas fa-phone"></i>
+              Phone: 1800 123456789
+            </p>
+            <p>
+               <i class="fas fa-envelope"></i>
+               Email:
+               <a href="#">doan@gmail.com</a>
+            </p>
+            <p>
+              <i class="fab fa-skype"></i>
+              Skype: doan_online
+            </p>
+        </div>
+        <div class="txt3">
+          <h3>Hỗ trợ</h3>
+          <p>
+            <a href="#">1. Chính sách mua hàng</a>
+          </p>
+          <p>
+            <a href="#">2. Chính sách thanh toán</a>
+          </p>
+          <p>
+              <a href="#">3. Chính sách vận chuyển </a>
+          </p>
+          <p>
+            <a href="#">4. Chính sách bảo mật</a>
+          </p>
+        </div>  
+        <div class="txt3_plus">
+                <h3>Sản phẩm</h3>
+          <p>
+            <a href="#">Đồng hộ cặp đôi</a>
+          </p>
+          <p>
+              <a href="#">Đồng hồ nam</a>
+          </p>
+          <p>
+            <a href="#">Đồng hồ nam</a>
+          </p>
+        </div>
+            <div class="txt4">
+                <h3>Kết nối mạng xã hội</h3>
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-google-plus-g"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+                 <p>© Company Inc.</p>
+            </div>
+      </div>
+    </footer>
+</body>
+ <script type= "text/javascript" src="js/order.js" ></script>
+</html>

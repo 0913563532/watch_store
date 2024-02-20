@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>HILLTOP WATCH&reg;|BEUATY AND QUALITY </title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/animation.css">
+	
+</head>
+<body  onload="" >
+
+	 <div class="menu" >
+        <ul>
+          <li class="qua"><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i>  </a></li>
+           <li><a href="https://twitter.com/?lang=vi" target="_blank"><i class="fab fa-twitter"></i>  </a></li>
+          <li><a href="https://www.google.com.vn/?hl=vi" target="_blank"><i class="fab fa-google"></i></a></li>
+          <li><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+      
+
+          <li class="qua1"><a href="index.html" target="_parent" ><i class="fas fa-home"> </i> Trang chủ</a></li>
+          <li><a href="#" target="_parent"><i class="far fa-handshake"> </i> Tuyển dụng</a></li>
+          <li><a href="#" target="_parent"><i class="fas fa-info-circle"></i> Giới thiệu</a></li>
+          <li><a href="#" target="_parent"><i class="fas fa-wrench"> </i> Bảo hành</a></li>
+          <li><a href="#" target="_parent"><i class="fas fa-phone-alt"> </i> Liên hệ</a></li>
+        </ul>
+
+    <!-- menu2-->
+      <div class="menu2">
+        <div class="htw"><a href="#" target="_blank">HILLTOP WATCH</a></div>
+        <div class="search1">
+          <form autocomplete="on">
+            <input  class="search" type="text"  id="timkiem" onkeyup="search();mosearch();return false;" type="search" name="mysearch" list="phones" list="trademarks" placeholder="  Nhập từ khóa tìm kiếm..."><button class="kinhlup" class="opensearch" onclick="mosearch();return false;"><i class="fas fa-search"></i></button>
+
+            <div id="khungsearch">
+						<div id="thanhsearch">
+						
+						<!--<button onclick= "showsearchnangcao()" >Lọc sản phẩm</button>-->
+						</div>
+						<div id="closesearch" onclick="closesearch();">+</div>
+						<div id="searchnangcao" style="display: none;">
+							<div>
+							<select id="loaisanpham" onchange="search();">
+								<option value="all" selected>Tất Cả Sản Phẩm</option>
+								<option value="CASIO" selected>KUBBA</option>
+								<option value="MOVADO" selected>MOVADO</option>
+								<option value="ROLEX" selected>ROLEX</option>
+								<option value="OMEGA" selected>OMEGA</option>
+								<option value="CITIZEN" selected>CITIZEN</option>
+								<option value="LONGINES" selected>LONGINES</option>
+								<option value="SEIKO" selected>SEIKO</option>
+								<option value="TISSOT" selected>TISSOT</option>
+							</select>
+							</div>
+							<div><input style="height: 30px;" type="text" id="priceform"  value="" placeholder="Giá từ"><i id="khoangcachsearch" class= "fa fa-long-arrow-right"></i><input style="height: 30px;" type="text" id="priceto"  value=" " placeholder="Đến">
+								<div id="vbn"><button onclick="search();return false;" style="width: 100px;color: green;font-size: 30px;">Lọc</button></div>
+							</div>
+
+						</div>
+							<div id="searchresult">
+							</div>
+					</div>
+
+
+            <div class="acount">
+              <div id ="taikhoan">
+                <button id="user" id="tk" name="bt1" type="button"  onclick="openForm();dongdangky();" >  <i class="fas fa-user"></i> Đăng nhập
+                </button><span id="user-onload" style="display: none;"></span>
+
+              </div>
+              <div class="giohang">
+               <a href="cart.html" id="giohang" class="hra"> <button id="giohang2" name="bt2" id="shopping-cart" class="tooltip" type="button"  onclick="document.getElementById('user-onload').style.display='none'"><i class="fas fa-shopping-cart"> </i> Giỏ hàng
+                </button></a>>
+              </div>
+
+            </div>
+
+            <datalist id="phones" id="trademarks">
+              <option value="Đồng hồ ROLEX"></option>
+              <option value="Dồng hồ CASIO"></option>
+              <option value="Đồng hồ Nam"></option>
+              <option value="Đồng hồ cặp"></option>
+            </datalist>
+          </form>
+        </div>
+
+
+      </div>
+
+      </div>
+
+
+<div class="slide">
+        <div class="mySlides" style="">
+          <img src="IMAGES/slideshow/WWW.png" width="100%">
+          <strong><h2>LỊCH LÃM</br><hr style="border:10px red solid; width:50px; border-radius: 10px; ">QÚY PHÁI</h2></strong>
+        </div>
+
+        <div class="mySlides" style="">
+           <img src="IMAGES/slideshow/GGG.png" width="100%" >
+           <strong><h2>SANG CHẢNH</br><hr style="border:10px red solid; width:50px;border-radius: 10px; ">SÀNH ĐIỆU</h2></strong>
+        </div>
+
+        <div class="mySlides">
+           <img src="IMAGES/slideshow/VVV.jpg" width="100%"  >
+           <strong><h2>CẶP ĐÔI</br><hr style="border:10px red solid; width:50px;border-radius: 10px; ">HOÀN HẢO</h2></strong>
+        </div>
+
+     
+      </div>
+       <!--slide-->
+
+        <!--slide2-->
+
+        <div class="slide2">
+          <div class="c" style="">
+           <img src="images/16.jpg" width="100%">
+          </div>
+
+          <div class="c" style="">
+            <img src="images/25.jpg" width="100%" >
+          </div>
+
+        </div>
+        <!--slide2-->
+
+        <!--logo-->
+        <div class="logo">
+          <div class="title">
+            <hr style="width: 400px;border: 1px #e1e1e1 solid;">
+            <p class="tenn"><strong>Thương hiệu nổi tiếng nhất</strong></p>
+            <span><hr style="width: 400px;border: 1px #e1e1e1 solid;"></span>
+          </div>
+
+          <div class="khungto">
+            <div class="logoimg">
+              <a href="#" id="tissot" onclick="sptissot();document.getElementById('6661').style.display='block'"><img src="IMAGES/logothuonghieu/t1.png" width="85%" ></a>
+            </div>
+
+            <div class="logoimg">
+             <a href="#" id="longines" onclick="splongines();;document.getElementById('2221').style.display='block'"><img src="IMAGES/logothuonghieu/t2.png" width="85%" ></a>
+            </div>
+
+            <div class="logoimg">
+             <a href="#" id="omega" onclick="spomega();document.getElementById('4441').style.display='block'"><img src="IMAGES/logothuonghieu/t3.png" width="85%" ></a>
+            </div>
+
+            <div class="logoimg">
+             <a href="#" id="movado" onclick="spmovado();document.getElementById('3331').style.display='block'"><img src="IMAGES/logothuonghieu/t4.png" width="85%" ></a>
+            </div>
+
+            <div class="logoimg">
+              <a href="#" id="casio" onclick="spcasio();document.getElementById('1111').style.display='block'"><img class="t5" src="IMAGES/logothuonghieu/t5.png" width="85%" ></a>
+            </div>
+
+            <div class="logoimg">
+             <a href="#" id="rolex" onclick="sprolex();document.getElementById('5551').style.display='block'"><img class="t6" src="IMAGES/logothuonghieu/t6.png" width="85%" ></a>
+            </div>
+
+            <div class="logoimg">
+              <a href="#" id="citizen" onclick="spcitizen();document.getElementById('8881').style.display='block'"><img src="IMAGES/logothuonghieu/t7.png" width="85%" ></a>
+           </div>
+
+          </div>
+        </div>
+
+
+	
+			
+			<div id="header-right" class="column right">
+				
+				<span  id="user-onload"></span>
+				<span id="shopping-cart" class="tooltip">
+					
+				</span>
+				
+				<!-- <span id="taikhoan" class="tooltip">
+					<a href="#" onclick="openLogOut();" class="hra"><i class="fas fa-caret-down"></i></a>
+					<span class="tooltiptext tooltipcart" id="tooltiptk">Tài khoản</span>	
+				</span> -->
+
+			</div>
+	
+<div id="icon8" onclick="showsearchnangcao();mosearch1();"><i  class="fas fa-filter"></i>Bộ lọc</div>
+
+
+
+	<div id="banner">
+		  
+		<div class="botmid">
+			<div id="chiasanpham">
+				<ul id = "menuleft">
+				</ul>
+			</div>
+
+			<div id="gow"> </div>
+
+			<div id="product-info" class ="modal">
+				<div id="info-detail">
+					<button type="button" class="close" onClick="closeProductInfo()">+</button>
+						<div class="left">
+							<img id="imgbig" src="">
+						</div>
+						<div class="right">
+							<h2 id="productname"></h2>
+							<h4 id="productprice"></h4>
+							<h4>Số lượng</h4>
+							<button class="quantitydown" onClick="quantitydown()">-</button><input type="number" min="1"; id="quantity" value="1"><button class="quantityup" onClick="quantityup()">+</button>
+							<h4 id="thongtin"></h4>
+							<button class="addtocart" id="adsanpham" onclick="addToCart();">Thêm vào giỏ</button>
+						</div>
+				</div>
+			</div>
+
+			<div id="sotrang">
+				<div id="phantrang">
+					<script type="text/javascript"></script>
+				</div>
+			</div>
+		</div>
+	</div>
+			
+
+			
+			
+			
+	
+ <!-- footer -->
+<footer>
+      <div class="container1">
+      
+        <div class="txt2">
+          <h3>Liên hệ</h3>
+          <p>
+              <i class="fas fa-map-marker-alt"></i>
+                  99 An Dương Vương, Phường 16, Quận 8, TP.HCM
+            </p>
+            <p>
+              <i class="fas fa-phone"></i>
+              Phone: 1800 123456789
+            </p>
+            <p>
+               <i class="fas fa-envelope"></i>
+               Email:
+               <a href="#">doan@gmail.com</a>
+            </p>
+            <p>
+              <i class="fab fa-skype"></i>
+              Skype: doan_online
+            </p>
+        </div>
+        <div class="txt3">
+          <h3>Hỗ trợ</h3>
+          <p>
+            <a href="#">1. Chính sách mua hàng</a>
+          </p>
+          <p>
+            <a href="#">2. Chính sách thanh toán</a>
+          </p>
+          <p>
+              <a href="#">3. Chính sách vận chuyển </a>
+          </p>
+          <p>
+            <a href="#">4. Chính sách bảo mật</a>
+          </p>
+        </div>  
+        <div class="txt3_plus">
+                <h3>Sản phẩm</h3>
+          <p>
+            <a href="#">Đồng hộ cặp đôi</a>
+          </p>
+          <p>
+              <a href="#">Đồng hồ nam</a>
+          </p>
+          <p>
+            <a href="#">Đồng hồ nam</a>
+          </p>
+        </div>
+            <div class="txt4">
+                <h3>Kết nối mạng xã hội</h3>
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-google-plus-g"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+                 <p>© Company Inc.</p>
+            </div>
+      </div>
+    </footer>
+
+	<div id="container">
+			<div id="daux" onclick="Xclose();">+</div>
+			<button class="tablink" id="dangnhap" onclick="formColor('form-DN',this);">Đăng nhập<hr></button>
+			<button class="tablink1" id="dangky" onclick="formColor('form-DK',this);">Đăng ký<hr id="hr1"></button>
+			<!-- <form id="logIn" class="in-put" method="post"> -->
+				<div id="form-DN" class="formain">
+					<form id="logInform">
+						<i id="icon1"class="fas fa-user-alt"></i><input type="text" name="username" placeholder="Tên đăng nhập" autofocus="" id="username">
+						<div id="usernameerror" class="error">Bạn chưa nhập tên đăng nhập</div>
+						<br>
+						<i id="icon2" class="fas fa-lock"></i><input type="password" name="password" placeholder="Mật khẩu" id="password">
+						<div id="passwordloginerror" class="error">Bạn chưa nhập mật khẩu</div>
+
+						<input id="DNf" type="button" name="dangnhap" value="Đăng nhập" onclick="logIn();">
+						<div><i id="icon3" class="fas fa-key"></i><a id="quen1" href="#">  Quên mật khẩu?</a></div>
+						<div><i id="icon4" class="fas fa-user-plus"></i></i><a id="quen2" onclick="openForm1();" href="#"> Đăng ký ngay!</a></div>
+						<div><a href="http://www.facebook.com.vn/"><img id="anh1" link="http://www.facebook.com.vn/" src="images/logothuonghieu/face.png"></a><a href="https://www.google.com/"> <img id="anh2" src="images/logothuonghieu/go.png" href="https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAAQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin" width="6%"></a><a id="quen3">Hoặc dăng nhập với!</a></div>
+					</form>
+				</div>
+			<!-- </form> -->
+			<div id="form-DK" class="formain" >
+				<form id="signUpform" >
+					<div id="the">
+						<input type="text" name="hoten" placeholder="Họ và tên" id="hoten" required pattern="\S+" >
+						<div id="errorhoten" class="error">Bạn chưa nhập họ tên</div>
+					</div>
+					<div id="the">
+						<input type="text" name="ten-dn" placeholder="Tên đăng nhập" id="ten-dn"  >
+						<div id="errortendn" class="error">Vui lòng nhập tên đăng nhập</div>
+					</div>
+					<div id="the">
+						<input type="password" name="matkhau" placeholder="Mật khẩu" id="matkhau" >
+						<div id="errormk" class="error">Bạn chưa nhập mật khẩu</div>
+					</div>
+					<div id="the">
+						<input  type="password" name="rp-matkhau" placeholder="Nhập lại mật khẩu" id="rp-matkhau" >
+						<div id="error-rpmk" class="error">Mật khẩu không trùng khớp</div>
+
+					</div>
+					<div id="gioitinh">Giới tính:
+						<input type="radio" name="sex" checked="checked"> Nam
+						<input type="radio" name="sex"> Nữ
+					</div>
+					<div id="ngaysinh">Ngày sinh:
+						<input type="date" name="ngaysinh" >
+					</div>
+					<div id="the">
+						<input type="text" name="phone-number" placeholder="Số điện thoại" id="phone_number" >
+						<div id="errorphone" class="error">Vui lòng nhập số điện thoại</div>
+					</div>	
+					
+					<div id="the">
+						<input type="text" name="address" placeholder="Địa chỉ" id="address" >
+						<div id="erroradress" class="error">Vui lòng nhập địa chỉ</div>
+					</div>
+					
+				
+					<div id="nut">
+						<input type="button" value="Reset" onclick="resetForm();">
+						<input type="button" onclick="signUp();" value="Đăng Ký">
+
+					</div>
+				</form>
+			</div>
+			
+	</div>
+	<div id="bgden"></div>
+	<div id="customalert"></div>
+	<script type="text/javascript" src="js/main.js" language="javascript"></script>
+	<script>
+		showSlides();
+carousel();
+
+		  CreateProduct();
+createAdmin();
+showMenu();
+ showFull();
+	</script>
+</body>
+</html>

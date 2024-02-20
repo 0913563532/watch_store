@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>THỐNG KÊ SẢN PHẨM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/all.css">
+    <script type="text/javascript" src="js/dashboard.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+
+</head>
+<body onload="thongke1()">
+        <div class="container">
+            <div class="navbar" style="position: relative;">
+                <div class="logo">
+                    <a href="#" >HILL TOP WATCH</a>
+                </div>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="dashboard.html?" id="main-page">THỐNG KÊ</a></li>
+                        <li><a href="product.html" class="tab-menu">SẢN PHẨM</a></li>
+                        <li><a href="customer.html" class="tab-menu">KHÁCH HÀNG</a></li>
+                        <li><a href="order.html" class="tab-menu">ĐƠN HÀNG</a></li>
+                    </ul> 
+                    <a href="#" id="admin" onclick="closeAccount();"><span ><i style="color:White;" onclick="openLogOut();" class="fas fa-user-cog"> </i> Boss <i class="fas fa-angle-down"></i></span></a> 
+                    <a href="C:\Users\viet sanh\Desktop\Nhom7_thu57\HILL_TOP_WATCH\index.html" ><div id="log-out">Trở về trang chủ</div></a>    
+                </nav>            
+            </div>       
+        </div>
+    <!-- dashboard -->
+        <div id="dashboard" style="height: 750px; ">
+            <div id="dashtop" style="display: inline-block;width: 100%">
+                <div id="doanhthu" style="margin-left: 10px;float: left;width: 30%">
+                    <div class="top" >
+                        <div id="total" style="width: 80%; font-size: 30px;color: #FFFF00;margin-left: 24%"  >0 VNĐ</div>
+                        <div id="" style="color: white;font-size: 18px;width: 30%; ">Doanh thu</div>
+                    </div>
+                    <div class="bottom" style="width: 400px;background-color:#FFFF00;height: 5px;margin-top: 5%"></div>
+                </div>
+                <div id="" style="float: left;width: 35%;margin-left: 3%;">
+                    <div class="top" >
+                        <div id="tongsodonhang" style="width: 80%; font-size: 30px;color: #00CC00; "><i class="fas fa-check-circle" style="margin-right:72% "></i>0/0</div>
+                        <div style="color: white;font-size: 18px;margin-bottom: 5px; ">Đơn giao thành công/ Tổng số đơn hàng</div>
+                       
+                    </div>
+                    <div class="bottom" style="width: 400px;background-color:#00CC00;height: 5px;margin-top: 5%"></div>
+                    
+                </div>
+                <div style="float: left;width: 28%;margin-left: 3%">
+                     <div class="top" >
+                        <div style="width: 100%; font-size: 30px;color:     #CC0000; "><i class="fas fa-exclamation-triangle" style="margin-right:78% "></i>0</div>
+                        <div id="" style="color: white;font-size: 18px;margin-bottom: 5px; ">Đơn gặp vấn đề</div>
+                       
+                    </div>
+                    <div class="bottom" style="margin-top: 5.3%;width: 350px;background-color:  #CC0000;height: 5px;"></div>
+                </div>
+            </div>
+            <div id="dashbottom" style="margin-top: 3%;margin-left:22%">
+                <!-- <div class="dashbot1">
+                    <div class="dashcontent" >Đơn hàng bị hoàn lại</div>
+                    <div class="dashquantity"><i class="fas fa-undo" style="color:#eb5a44 "></i>0</div>
+                </div>
+                <div class="dashbot1">
+                    <div  class="dashcontent">Tỉ lệ hoàn trả</div>
+                    <div class="dashquantity"><i class="fas fa-percent" style="color:#eb5a44 "></i>0</div>
+                </div>
+            </div>
+            <div id="dashbottom" style="margin-top: 2%;margin-left:22% ">
+                <div class="dashbot2">
+                    <div  class="dashcontent">Đơn đang giao hàng</div>
+                    <div class="dashquantity"><i class="fas fa-truck" style="color: #f7d702"></i>50</div>
+                </div>
+                <div class="dashbot2"><div  class="dashcontent">Sản phẩm bán được</div>
+                    <div class="dashquantity"><i class="fas fa-shopping-cart" style="color: #02fa13"></i>100</div>
+                </div> -->
+                <div>
+                   <select id="thongke-sp" style="cursor: pointer;">
+                    <option>Tất Cả Sản Phẩm</option>
+                    <option>CASIO</option>
+                    <option>MOVADO</option>
+                    <option>LONGINES</option>
+                    <option>OMEGA</option>
+                    <option>CITIZEN</option>
+                    <option>ROLEX</option>
+                    <option>TISSOT</option>
+                    <option>SEIKO</option>
+                  </select>
+                  <select id="thongke-thang" style="cursor: pointer;">
+                   <option>Tháng 1</option>
+                   <option>Tháng 2</option>
+                   <option>Tháng 3</option>
+                   <option>Tháng 4</option>
+                   <option>Tháng 5</option>
+                   <option>Tháng 6</option>
+                   <option>Tháng 7</option>
+                   <option>Tháng 8</option>
+                   <option>Tháng 9</option>
+                   <option>Tháng 10</option>
+                   <option>Tháng 11</option>
+                   <option>Tháng 12</option>
+                  </select> 
+                  <select id="thongke-nam" style="cursor: pointer;">
+                    <option>Năm 2010</option>
+                    <option>Năm 2011</option>
+                    <option>Năm 2012</option>
+                    <option>Năm 2013</option>
+                    <option>Năm 2014</option>
+                    <option>Năm 2015</option>
+                    <option>Năm 2016</option>
+                    <option>Năm 2017</option>
+                    <option>Năm 2018</option>
+                    <option>Năm 2019</option>
+                    <option>Năm 2020</option>
+                  </select>
+                  <button style="width: 10%;cursor: pointer;" onclick="thongke()">Tìm Kiếm</button>
+                </div>
+                <div id="showthongke"></div>
+            </div>
+        </div>
+
+    <!-- footer -->
+<footer>
+      <div class="container1">
+      
+        <div class="txt2">
+          <h3>Liên hệ</h3>
+          <p>
+              <i class="fas fa-map-marker-alt"></i>
+                  99 An Dương Vương, Phường 16, Quận 8, TP.HCM
+            </p>
+            <p>
+              <i class="fas fa-phone"></i>
+              Phone: 1800 123456789
+            </p>
+            <p>
+               <i class="fas fa-envelope"></i>
+               Email:
+               <a href="#">doan@gmail.com</a>
+            </p>
+            <p>
+              <i class="fab fa-skype"></i>
+              Skype: doan_online
+            </p>
+        </div>
+        <div class="txt3">
+          <h3>Hỗ trợ</h3>
+          <p>
+            <a href="#">1. Chính sách mua hàng</a>
+          </p>
+          <p>
+            <a href="#">2. Chính sách thanh toán</a>
+          </p>
+          <p>
+              <a href="#">3. Chính sách vận chuyển </a>
+          </p>
+          <p>
+            <a href="#">4. Chính sách bảo mật</a>
+          </p>
+        </div>  
+        <div class="txt3_plus">
+                <h3>Sản phẩm</h3>
+          <p>
+            <a href="#">Đồng hộ cặp đôi</a>
+          </p>
+          <p>
+              <a href="#">Đồng hồ nam</a>
+          </p>
+          <p>
+            <a href="#">Đồng hồ nam</a>
+          </p>
+        </div>
+            <div class="txt4">
+                <h3>Kết nối mạng xã hội</h3>
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-google-plus-g"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+                 <p>© Company Inc.</p>
+            </div>
+      </div>
+    </footer>
+</body>
+ <script type= "text/javascript" >
+     function closeAccount(){
+    if(document.getElementById('log-out').style.display == 'none'){
+        document.getElementById('log-out').style.display = 'block';
+    }else{
+        document.getElementById('log-out').style.display = 'none';
+    }
+}
+ </script>
+</html>

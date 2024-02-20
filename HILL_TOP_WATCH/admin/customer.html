@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KHÁCH HÀNG </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/customer.css">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/all.css">
+
+</head>
+<body>
+        <div class="container">
+            <div class="navbar" style="position: relative;">
+                <div class="logo">
+                    <a href="#">HILL TOP WATCH</a>
+                </div>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="dashboard.html" class="tab-menu">THỐNG KÊ</a></li>
+                        <li><a href="product.html" class="tab-menu">SẢN PHẨM</a></li>
+                        <li><a href="customer.html?" id="main-page">KHÁCH HÀNG</a></li>
+                        <li><a href="order.html" class="tab-menu">ĐƠN HÀNG</a></li>
+                    </ul> 
+                    <a href="#" id="admin" onclick="closeAccount();"><span ><i style="color:White;" onclick="openLogOut();" class="fas fa-user-cog"> </i> Boss <i class="fas fa-angle-down"></i></span></a>
+                    <a href="admin.html" ><div id="log-out"> Về Trang Quản Lý</div></a>    
+                </nav>            
+            </div>       
+        </div>
+        <div id="sanpham" style="margin-left: 5%; height: 995px">
+            <div class="sua">
+                <div id="formsua">
+                    <div id="suasanpham" style="margin-left: 10%; height: 90%;">
+                        <div style="width: 100%; height: 50px; margin-top: 20px; font-size: 30px; text-align: center; position: relative;"><b>CHỈNH SỬA QUYỀN KHÁCH HÀNG</b>
+                            <div id="X" onclick="TatForm();">+</div>
+                        </div>
+                        <div class="dulieuinput">Họ và tên: </div>
+                        <input type="text" name="name" placeholder="Nhập họ và tên" id="hoten">
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Tên đăng nhập: </div>
+                        <input type="text" name="brand" placeholder="Nhập tên đăng nhập" id="usr">
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Số điện thoại: </div>
+                        <input type="text" name="phone" placeholder="Nhập số điện thoại" id="phone">
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Địa chỉ: </div>
+                        <input type="text" name="img" id="dc">
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Quyền khách hàng: </div>
+                        <select style="border-radius: 10px" id="quyen">
+                            <option>admin</option>
+                            <option>user</option>
+                        </select>
+                        <div style="clear: both"></div>
+                        <button onclick="saveUser()" style="width: 30%; margin-top: 15px; height: 40px; border-radius: 5px; background-color: black; color: white"><b onclick="TatForm();" style="cursor: pointer;">Thay đổi thông tin</b></button>
+                    </div>
+                </div>
+            </div> 
+            <div id="ds1"style="width: 37%; height: 50px; font-size: 30px; color: white;"><b>DANH SÁCH KHÁCH HÀNG</b></div>
+            <div id="thongtinkh">
+                <div class="thongtin" style="width: 121px">ID</div>
+                <div class="thongtin" style="width: 243px">Họ tên</div>
+                <div class="thongtin" style="width: 243px">Tên đăng nhập</div>
+                <div class="thongtin" style="width: 243px">Số điện thoại</div>
+                <div class="thongtin" style="width: 243px">Tình trạng</div>
+                <div class="thongtin" style="width: 121px">Chức năng</div>
+                <div style="clear: both"></div>
+            </div>
+            <div id="thongtinkh">
+                <div id="idkh" style="width: 121px"></div>
+                <div id="hotenkh" style="width: 243px"></div>
+                <div id="userkh" style="width: 243px"></div>
+                <div id="phonekh" style="width: 243px"></div>
+                <div id="tinhtrangkh" style="width: 243px"></div>
+                <div id="chucnangkh" style="width: 121px"></div>
+                <div style="clear: both"></div>
+            </div>  
+        </div>
+        <div id="bgden"></div>
+        <div id="phantrangkh"></div>
+ <!-- footer -->
+<footer>
+      <div class="container1">
+      
+        <div class="txt2">
+          <h3>Liên hệ</h3>
+          <p>
+              <i class="fas fa-map-marker-alt"></i>
+                  99 An Dương Vương, Phường 16, Quận 8, TP.HCM
+            </p>
+            <p>
+              <i class="fas fa-phone"></i>
+              Phone: 1800 123456789
+            </p>
+            <p>
+               <i class="fas fa-envelope"></i>
+               Email:
+               <a href="#">doan@gmail.com</a>
+            </p>
+            <p>
+              <i class="fab fa-skype"></i>
+              Skype: doan_online
+            </p>
+        </div>
+        <div class="txt3">
+          <h3>Hỗ trợ</h3>
+          <p>
+            <a href="#">1. Chính sách mua hàng</a>
+          </p>
+          <p>
+            <a href="#">2. Chính sách thanh toán</a>
+          </p>
+          <p>
+              <a href="#">3. Chính sách vận chuyển </a>
+          </p>
+          <p>
+            <a href="#">4. Chính sách bảo mật</a>
+          </p>
+        </div>  
+        <div class="txt3_plus">
+                <h3>Sản phẩm</h3>
+          <p>
+            <a href="#">Đồng hộ cặp đôi</a>
+          </p>
+          <p>
+              <a href="#">Đồng hồ nam</a>
+          </p>
+          <p>
+            <a href="#">Đồng hồ nam</a>
+          </p>
+        </div>
+            <div class="txt4">
+                <h3>Kết nối mạng xã hội</h3>
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-google-plus-g"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+                 <p>© Company Inc.</p>
+            </div>
+      </div>
+    </footer>
+</body>
+ <script type= "text/javascript" src="js/customer.js" ></script>
+</html>

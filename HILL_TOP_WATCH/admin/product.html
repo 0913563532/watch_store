@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SẢN PHẨM </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/all.css">
+
+</head>
+<body>
+        <div class="container">
+            <div class="navbar" style="position: relative;">
+                <div class="logo">
+                    <a href="#">HILL TOP WATCH</a>
+                </div>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="dashboard.html" class="tab-menu">THỐNG KÊ</a></li>
+                        <li><a href="product.html?" id="main-page">SẢN PHẨM</a></li>
+                        <li><a href="customer.html" class="tab-menu">KHÁCH HÀNG</a></li>
+                        <li><a href="order.html" class="tab-menu">ĐƠN HÀNG</a></li>
+                    </ul> 
+                    <a href="#" id="admin" onclick="closeAccount();"><span ><i style="color:White;" onclick="openLogOut();" class="fas fa-user-cog"> </i>Boss <i class="fas fa-angle-down"></i></span> </a>
+                    <a href="admin.html" ><div id="log-out"> Về Trang Quản lý</div></a>    
+                </nav>            
+            </div>       
+        </div>
+        <div id="sanpham" style="margin-left: 5%; height: 1550px">
+            <div class="sua">
+                <!-- <form action="admin.html" method="POST" enctype="multipart/form-data" name="form-sua"> -->
+                <div id="formsua">
+                    <div id="suasanpham" style="margin-left: 10%; height: 90%">
+                        <div style="margin-top: 20px; width: 100%; height: 50px; font-size: 30px; text-align: center; position: relative"><b>CHỈNH SỬA SẢN PHẨM</b>
+                            <div id="X" onclick="closeForm();" style="font-size: 40px;">+</div>
+                        </div>
+                        <div class="dulieuinput">Tên sản phẩm: </div>
+                        <input type="text" name="name" placeholder="Nhập tên sản phẩm" id="namesua">
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Thương hiệu: </div>
+                        <input type="text" name="brand" placeholder="Nhập tên thương hiệu sản phẩm" id="brandsua">
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Giá sản phẩm: </div>
+                        <input type="text" name="price" placeholder="Nhập giá sản phẩm" id="pricesua">
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Loại sản phẩm: </div>
+                        <select style="border-radius: 10px" id="loaisua">
+                            <option>CASIO</option>
+                            <option>ROLEX</option>
+                            <option>TISSOT</option>
+                            <option>MOVADO</option>
+                            <option>LONGINES</option>
+                            <option>SEIKO</option>
+                            <option>CITIZEN</option>
+                            <option>OMEGA</option>
+                        </select>
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Chi tiết sản phẩm: </div>
+                        <input type="text" name="detail" placeholder="Nhập chi tiết sản phẩm" id="detailsua">
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Hình ảnh sản phẩm: </div>
+                        <input type="file" name="img" id="imgsua" >
+                        <div style="clear: both"></div>
+                        <button onclick="saveProduct();" style="width: 30%; margin-top: 15px; height: 40px; border-radius: 50px; background-color: black; color: white;font-size: 20px;"><b>LƯU SẢN PHẨM</b></button>
+                    </div>
+                </div>
+                <!-- </form> -->
+            </div>
+            <div style="width: 100%; height: 50px;  text-align: center;margin-bottom: 1rem;color: white;position: relative;">
+                <button id="btnsearch" onclick="document.getElementById('searchsp').style.display ='block'"><i class="fas fa-search" style="margin-right: 5%"></i>Tìm kiếm</button>
+                <b id="ds" style="font-size: 30px;">DANH SÁCH SẢN PHẨM</b>
+                <button id="btnadd" onclick="openAddForm();"><b style="font-size: 25px;">+</b> THÊM SẢN PHẨM MỚI</button>
+                <!-- <button id="rsadd" onclick="resetAddForm();"></button> -->
+            </div>
+            <div id="themsanpham" >
+                <div style="width: 100%; height: 50px; font-size: 30px; text-align: center"><b>THÊM SẢN PHẨM</b></div>
+                <div id="X" onclick="closeFormAdd();" style="right: 32px;top:6px;font-size: 40px;">+</div>
+
+                <div class="dulieuinput">Tên sản phẩm: </div>
+                <input type="text" name="name" placeholder="Nhập tên sản phẩm" id="name-sp">
+                <div style="clear: both"></div>
+                <div class="dulieuinput">Thương hiệu: </div>
+                <input type="text" name="brand" placeholder="Nhập tên thương hiệu sản phẩm" id="brand-sp">
+                <div style="clear: both"></div>
+                <div class="dulieuinput">Giá sản phẩm: </div>
+                <input type="text" name="price" placeholder="Nhập giá sản phẩm" id="price-sp">
+                <div style="clear: both"></div>
+                <div class="dulieuinput">Loại sản phẩm: </div>
+                <select style="border-radius: 10px" id="loai-sp">
+                   <option>KUBBA</option>
+                            <option>ROLEX</option>
+                            <option>TISSOT</option>
+                            <option>MOVADO</option>
+                            <option>LONGINES</option>
+                            <option>SEIKO</option>
+                            <option>CITIZEN</option>
+                            <option>OMEGA</option>
+                </select>
+                <div style="clear: both"></div>
+                <div class="dulieuinput">Chi tiết sản phẩm: </div>
+                <input type="text" name="chitiet" placeholder="Nhập chi tiết sản phẩm" id="detail-sp">
+                <div style="clear: both"></div>
+                <div class="dulieuinput">Hình ảnh sản phẩm: </div>
+                <input type="file" name="img" id="img-sp">
+                <div style="clear: both"></div>
+                <button onclick="addProduct()" style="width: 40%; margin-top: 10px; margin-left: 30%; height: 40px;border-radius: 10px; background-color: black; color: white"><b>THÊM SẢN PHẨM</b></button>
+            </div>
+            <div id="thongtinsp">
+                <div class="thongtin" style="width: 121px">ID</div>
+                <div class="thongtin" style="width: 243px">Ảnh</div>
+                <div class="thongtin" style="width: 364px">Tên sản phẩm</div>
+                <div class="thongtin" style="width: 122px">Loại</div>
+                <div class="thongtin" style="width: 242px">Giá</div>
+                <div class="thongtin" style="width: 121px">Chức năng</div>
+                <div style="clear: both"></div>
+            </div>
+            <div id="thongtinsp">
+                <div id="idsp" style="width: 121px"></div>
+                <div id="imgsp" style="width: 243px"></div>
+                <div id="tensp" style="width: 364px"></div>
+                <div id="loaisp" style="width: 121px"></div>
+                <div id="giasp" style="width: 243px"></div>
+                <div id="chucnangsp" style="width: 121px"></div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div id="bgden"></div>
+        <div id="phantrang"></div>
+        <div id="searchsp" >
+            
+            <div id="timkiemsanpham" style="position: relative;margin-bottom: 5%;">
+                <div style="width: 100%; height: 50px; font-size: 30px; text-align: center;margin-top: 3%"><b>TÌM KIẾM SẢN PHẨM</b></div>
+                <input type="text" name="name" placeholder="Nhập tên sản phẩm" id="value-sp">
+                <div id="timkiem" onclick="search(0);"><i class="fas fa-search"></i></div>
+                <div id="close" style="font-size: 50px;" onclick="document.getElementById('searchsp').style.display ='none'">+</div>
+            <div id="thongtinsp" style="margin-top: 5%;margin-left: 5.5%">
+                <div class="thongtin" style="width: 121px">ID</div>
+                <div class="thongtin" style="width: 243px">Ảnh</div>
+                <div class="thongtin" style="width: 364px">Tên sản phẩm</div>
+                <div class="thongtin" style="width: 122px">Loại</div>
+                <div class="thongtin" style="width: 242px">Giá</div>
+                <div class="thongtin" style="width: 121px">Chức năng</div>
+                <div style="clear: both"></div>
+            </div>
+            <div id="thongtinsp" style="margin-left: 5.5%">
+                <div id="idsptk" style="width: 121px"></div>
+                <div id="imgsptk" style="width: 243px"></div>
+                <div id="tensptk" style="width: 364px"></div>
+                <div id="loaisptk" style="width: 121px"></div>
+                <div id="giasptk" style="width: 243px"></div>
+                <div id="chucnangsptk" style="width: 121px"></div>
+                <div style="clear: both"></div>
+            </div>
+            </div>
+        </div>
+    <!-- footer -->
+<footer>
+      <div class="container1">
+      
+        <div class="txt2">
+          <h3>Liên hệ</h3>
+          <p>
+              <i class="fas fa-map-marker-alt"></i>
+                  99 An Dương Vương, Phường 16, Quận 8, TP.HCM
+            </p>
+            <p>
+              <i class="fas fa-phone"></i>
+              Phone: 1800 123456789
+            </p>
+            <p>
+               <i class="fas fa-envelope"></i>
+               Email:
+               <a href="#">doan@gmail.com</a>
+            </p>
+            <p>
+              <i class="fab fa-skype"></i>
+              Skype: doan_online
+            </p>
+        </div>
+        <div class="txt3">
+          <h3>Hỗ trợ</h3>
+          <p>
+            <a href="#">1. Chính sách mua hàng</a>
+          </p>
+          <p>
+            <a href="#">2. Chính sách thanh toán</a>
+          </p>
+          <p>
+              <a href="#">3. Chính sách vận chuyển </a>
+          </p>
+          <p>
+            <a href="#">4. Chính sách bảo mật</a>
+          </p>
+        </div>  
+        <div class="txt3_plus">
+                <h3>Sản phẩm</h3>
+          <p>
+            <a href="#">Đồng hộ cặp đôi</a>
+          </p>
+          <p>
+              <a href="#">Đồng hồ nam</a>
+          </p>
+          <p>
+            <a href="#">Đồng hồ nam</a>
+          </p>
+        </div>
+            <div class="txt4">
+                <h3>Kết nối mạng xã hội</h3>
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-google-plus-g"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+                 <p>© Company Inc.</p>
+            </div>
+      </div>
+    </footer>
+    
+</body>
+ <script type= "text/javascript" src="js/admin.js" ></script>
+</html>
